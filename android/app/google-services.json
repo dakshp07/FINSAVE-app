@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "696503072177",
+    "project_id": "finsave-438dd",
+    "storage_bucket": "finsave-438dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696503072177:android:91edf2d87390a6839d3990",
+        "android_client_info": {
+          "package_name": "com.example.money_manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696503072177-ng5fa3cptko4cag0t3plcir4gie9q46i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.money_manager",
+            "certificate_hash": "1278ba86af8370c43c35b5548b28f081e01b8ab2"
+          }
+        },
+        {
+          "client_id": "696503072177-p6iu8s3eho3pp6rdd388aamol5svscih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKRkADb7b7xJNCIgPCeRV10297ZBGlKg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696503072177-p6iu8s3eho3pp6rdd388aamol5svscih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
