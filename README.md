@@ -1,6 +1,7 @@
 # FINSAVE Mobile App (Coming Soon ...)
 
 Money management made easier and smooth 😉️
+Inspired by [BeThriftyToday](https://play.google.com/store/apps/details?id=today.bethrifty.app&hl=en_IN&gl=US)
 
 ## Getting Started
 
