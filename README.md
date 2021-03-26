@@ -21,6 +21,7 @@ A detailed guide for multiple platforms setup could be find [here](https://flutt
 
 ## Features
  - Login with E-Mail 💥️
+ - SignUp with Google 🔥️
  - Add your monthly budget, update day to day expenses 😎️
  - Many More...
 
@@ -61,6 +62,8 @@ $ git clone https://github.com/dakshp07/FINSAVE-app.git
 ## Screenshots
 
 <p>
+<img src="assets/app_ss/welcome.jpg"
+alt="Splash View" width="300">
 <img src="assets/app_ss/signin.jpg"
 alt="Splash View" width="300">
 <img src="assets/app_ss/signup.jpg" alt="Home View" width="300">

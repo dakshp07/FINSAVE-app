@@ -152,6 +152,12 @@
       "languageVersion": "2.2"
     },
     {
+      "name": "flutter_svg",
+      "rootUri": "file:///home/daksh/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.18.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///home/daksh/Desktop/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -212,10 +218,28 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "nested",
+      "rootUri": "file:///home/daksh/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/nested-0.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
+    },
+    {
       "name": "path",
       "rootUri": "file:///home/daksh/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0-nullsafety.1",
       "packageUri": "lib/",
       "languageVersion": "2.10"
+    },
+    {
+      "name": "path_drawing",
+      "rootUri": "file:///home/daksh/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/path_drawing-0.4.1+1",
+      "packageUri": "lib/",
+      "languageVersion": "1.19"
+    },
+    {
+      "name": "path_parsing",
+      "rootUri": "file:///home/daksh/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/path_parsing-0.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "1.19"
     },
     {
       "name": "path_provider",
@@ -276,6 +300,12 @@
       "rootUri": "file:///home/daksh/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/process-3.0.13",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///home/daksh/Desktop/flutter/.pub-cache/hosted/pub.dartlang.org/provider-4.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
     },
     {
       "name": "quiver",
@@ -368,7 +398,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-03-26T05:42:18.232620Z",
+  "generated": "2021-03-26T14:53:30.468765Z",
   "generator": "pub",
   "generatorVersion": "2.10.4"
 }
