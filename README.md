@@ -67,10 +67,6 @@ alt="Splash View" width="300">
 <img src="assets/app_ss/signin.jpg"
 alt="Splash View" width="300">
 <img src="assets/app_ss/signup.jpg" alt="Home View" width="300">
-<img src="assets/app_ss/forgotpass.jpg"
-alt="Splash View" width="300">
-<img src="assets/app_ss/wrongemailpass.jpg"
-alt="Splash View" width="300">
 </p>
 
 

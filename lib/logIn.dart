@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:money_manager/home.dart';
+import 'package:money_manager/name.dart';
 import 'package:money_manager/signUp.dart';
 
 class LogInPage extends StatefulWidget {
@@ -27,7 +28,7 @@ class _LogInPageState extends State<LogInPage> {
         await FirebaseAuth.instance
             .signInWithEmailAndPassword(email: mail, password: password);
         Navigator.push(context,
-            MaterialPageRoute(builder: (BuildContext context) => HomeScreen()));
+            MaterialPageRoute(builder: (BuildContext context) => NameScreen()));
       } catch (e) {
         print(e);
         setState(() {
@@ -177,32 +178,6 @@ class _LogInPageState extends State<LogInPage> {
                       color: Colors.black,
                     ),
                     new Padding(padding: const EdgeInsets.only(top: 15)),
-                    new GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (BuildContext context) => SignUp()));
-                      },
-                      child: new Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          new Text("Not Registered ?",
-                              style: GoogleFonts.poppins(
-                                  fontSize: 20,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w500)),
-                          new Text(
-                            " Sign-Up",
-                            style: GoogleFonts.poppins(
-                                fontSize: 20,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500),
-                          )
-                        ],
-                      ),
-                    ),
                     new Padding(padding: const EdgeInsets.only(top: 15)),
                     new GestureDetector(
                       onTap: resetPassword,

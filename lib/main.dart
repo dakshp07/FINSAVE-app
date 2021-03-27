@@ -7,6 +7,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:money_manager/logIn.dart';
+import 'package:money_manager/signUp.dart';
 import 'package:provider/provider.dart';
 
 Future<void> main() async {
@@ -81,7 +82,7 @@ class _OptionsPageState extends State<OptionsPage> {
                       )
                     ],
                   ),
-                  new Padding(padding: const EdgeInsets.only(top: 40)),
+                  new Padding(padding: const EdgeInsets.only(top: 20)),
                   new Row(
                     children: [
                       new Text("Welcome",
@@ -105,7 +106,7 @@ class _OptionsPageState extends State<OptionsPage> {
                     ],
                   ),
                   new Padding(
-                    padding: const EdgeInsets.only(top: 60),
+                    padding: const EdgeInsets.only(top: 40),
                   ),
                   new Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -143,7 +144,7 @@ class _OptionsPageState extends State<OptionsPage> {
                     ],
                   ),
                   new Padding(
-                    padding: const EdgeInsets.only(top: 60),
+                    padding: const EdgeInsets.only(top: 40),
                   ),
                   new Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -185,7 +186,36 @@ class _OptionsPageState extends State<OptionsPage> {
                     ],
                   ),
                   new Padding(
-                    padding: const EdgeInsets.only(top: 160),
+                    padding: const EdgeInsets.only(top: 40),
+                  ),
+                  new GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => SignUp()));
+                    },
+                    child: new Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        new Text("Not Registered ?",
+                            style: GoogleFonts.poppins(
+                                fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500)),
+                        new Text(
+                          " Sign-Up",
+                          style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w700),
+                        )
+                      ],
+                    ),
+                  ),
+                  new Padding(
+                    padding: const EdgeInsets.only(top: 150),
                   ),
                   new Row(
                     mainAxisAlignment: MainAxisAlignment.center,
