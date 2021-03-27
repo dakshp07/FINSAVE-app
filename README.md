@@ -58,6 +58,11 @@ If You Want To Clone This Repository Then Do The Following Steps :
 ```git
 $ git clone https://github.com/dakshp07/FINSAVE-app.git
 ```
+## Walkthrough
+Here is the walkthrough of the app which is still under development :
+
+<img src="assets/app_ss/app.gif" width="300"/>
+
 
 ## Screenshots
 
@@ -67,6 +72,9 @@ alt="Splash View" width="300">
 <img src="assets/app_ss/signin.jpg"
 alt="Splash View" width="300">
 <img src="assets/app_ss/signup.jpg" alt="Home View" width="300">
+<img src="assets/app_ss/name.jpg" alt="Home View" width="300">
+<img src="assets/app_ss/home.jpg" alt="Home View" width="300">
+<img src="assets/app_ss/drawer.jpg" alt="Home View" width="300">
 </p>
 
 

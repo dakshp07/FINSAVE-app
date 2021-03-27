@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:money_manager/main.dart';
 
 class SignUp extends StatefulWidget {
   @override
@@ -22,7 +23,10 @@ class _SignUpState extends State<SignUp> {
         await Firebase.initializeApp();
         await FirebaseAuth.instance
             .createUserWithEmailAndPassword(email: mail, password: password);
-        Navigator.pop(context);
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (BuildContext context) => OptionsPage()));
       } catch (e) {
         print(e);
       }
