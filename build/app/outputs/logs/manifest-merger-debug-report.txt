@@ -6,6 +6,7 @@ INJECTED from /home/daksh/Desktop/AndroidStudioProjects/money_manager/android/ap
 INJECTED from /home/daksh/Desktop/AndroidStudioProjects/money_manager/android/app/src/main/AndroidManifest.xml:1:1-48:12
 MERGED from /home/daksh/Desktop/AndroidStudioProjects/money_manager/android/app/src/main/AndroidManifest.xml:1:1-48:12
 MERGED from [:firebase_auth] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:url_launcher] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-14:12
 MERGED from [:cloud_firestore] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:path_provider] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:firebase_core] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
@@ -89,6 +90,8 @@ application
 ADDED from /home/daksh/Desktop/AndroidStudioProjects/money_manager/android/app/src/main/AndroidManifest.xml:9:5-47:19
 MERGED from [:firebase_auth] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_auth] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:url_launcher] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-12:19
+MERGED from [:url_launcher] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-12:19
 MERGED from [:cloud_firestore] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:cloud_firestore] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
@@ -189,6 +192,8 @@ INJECTED from /home/daksh/Desktop/AndroidStudioProjects/money_manager/android/ap
 INJECTED from /home/daksh/Desktop/AndroidStudioProjects/money_manager/android/app/src/main/AndroidManifest.xml
 MERGED from [:firebase_auth] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
@@ -315,6 +320,14 @@ ADDED from [:firebase_auth] /home/daksh/Desktop/AndroidStudioProjects/money_mana
 		ADDED from [:firebase_auth] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 	android:name
 		ADDED from [:firebase_auth] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-11:74
+	android:exported
+		ADDED from [:url_launcher] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-37
+	android:theme
+		ADDED from [:url_launcher] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-71
+	android:name
+		ADDED from [:url_launcher] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-74
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
 ADDED from [:cloud_firestore] /home/daksh/Desktop/AndroidStudioProjects/money_manager/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 	android:value

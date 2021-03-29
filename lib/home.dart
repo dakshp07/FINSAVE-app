@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:money_manager/developerscreen.dart';
 import 'package:money_manager/main.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -44,7 +45,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Colors.grey[600])),
                 currentAccountPicture: new CircleAvatar(
                   backgroundColor: Colors.white,
-                  child: new Text(widget.firstname[0] + widget.lname[0],
+                  child: new Text(
+                      widget.firstname[0].toUpperCase() +
+                          widget.lname[0].toUpperCase(),
                       style: GoogleFonts.poppins(
                           fontSize: 25,
                           fontWeight: FontWeight.w600,
@@ -196,7 +199,13 @@ class _HomeScreenState extends State<HomeScreen> {
                               fontWeight: FontWeight.w600)),
                     ],
                   ),
-                  onTap: () {}),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                DeveloperScreen()));
+                  }),
               new Padding(
                 padding: const EdgeInsets.only(top: 25),
               ),
