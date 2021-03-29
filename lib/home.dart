@@ -8,9 +8,6 @@ import 'package:money_manager/developerscreen.dart';
 import 'package:money_manager/main.dart';
 
 class HomeScreen extends StatefulWidget {
-  final String firstname;
-  final String lname;
-  HomeScreen({this.firstname, this.lname});
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -35,23 +32,18 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               new UserAccountsDrawerHeader(
                 decoration: new BoxDecoration(color: Colors.black),
-                accountName: new Text(widget.firstname + " " + widget.lname,
+                accountName: new Text("Welcome to FINSAVE App :)",
                     style: GoogleFonts.poppins(
-                        fontSize: 20, fontWeight: FontWeight.w600)),
-                accountEmail: new Text(user.email,
+                        fontSize: 17, fontWeight: FontWeight.w600)),
+                accountEmail: new Text("finsavehelp@gmail.com",
                     style: GoogleFonts.poppins(
                         fontSize: 15,
                         fontWeight: FontWeight.w600,
                         color: Colors.grey[600])),
                 currentAccountPicture: new CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: new Text(
-                      widget.firstname[0].toUpperCase() +
-                          widget.lname[0].toUpperCase(),
-                      style: GoogleFonts.poppins(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black)),
+                  backgroundImage: new AssetImage(
+                    "assets/logo/logo.JPG",
+                  ),
                   radius: 10,
                 ),
               ),

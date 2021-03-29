@@ -13,7 +13,6 @@ class _NameScreenState extends State<NameScreen> {
   final TextEditingController fname = new TextEditingController();
   final TextEditingController lname = new TextEditingController();
   User user = FirebaseAuth.instance.currentUser;
-  String fName, lastname;
 
   void addName() {
     if (fname.text.isNotEmpty && lname.text.isNotEmpty) {
@@ -22,17 +21,8 @@ class _NameScreenState extends State<NameScreen> {
         "last name": lname.text,
         "monthly budget": "₹0"
       });
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (BuildContext context) => HomeScreen(
-                    firstname: fName,
-                    lname: lastname,
-                  )));
-      setState(() {
-        fName = fname.text;
-        lastname = lname.text;
-      });
+      Navigator.push(context,
+          MaterialPageRoute(builder: (BuildContext context) => HomeScreen()));
     }
   }
 
