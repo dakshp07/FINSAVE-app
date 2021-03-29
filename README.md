@@ -16,6 +16,7 @@ A detailed guide for multiple platforms setup could be find [here](https://flutt
 
 - Clone this repository.
 - `cd` into `FINSAVE-app`.
+- `flutter clean` to get rid of pre defined folders built in runtime.
 - `flutter pub get` to get all the dependencies.
 - `flutter run`
 
@@ -75,6 +76,7 @@ alt="Splash View" width="300">
 <img src="assets/app_ss/name.jpg" alt="Home View" width="300">
 <img src="assets/app_ss/home.jpg" alt="Home View" width="300">
 <img src="assets/app_ss/drawer.jpg" alt="Home View" width="300">
+<img src="assets/app_ss/developer.jpg" alt="Home View" width="300">
 </p>
 
 
