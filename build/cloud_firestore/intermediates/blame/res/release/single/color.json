@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/daksh/Desktop/AndroidStudioProjects/money_manager/build/cloud_firestore/intermediates/res/merged/release/color/common_google_signin_btn_text_dark.xml",
+        "source": "/home/daksh/.gradle/caches/transforms-2/files-2.1/63333801825fa8fbd9c7151e28fb5ce4/play-services-base-17.0.0/res/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/home/daksh/Desktop/AndroidStudioProjects/money_manager/build/cloud_firestore/intermediates/res/merged/release/color/common_google_signin_btn_text_light.xml",
+        "source": "/home/daksh/.gradle/caches/transforms-2/files-2.1/63333801825fa8fbd9c7151e28fb5ce4/play-services-base-17.0.0/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/home/daksh/Desktop/AndroidStudioProjects/money_manager/build/cloud_firestore/intermediates/res/merged/release/color/common_google_signin_btn_tint.xml",
+        "source": "/home/daksh/.gradle/caches/transforms-2/files-2.1/63333801825fa8fbd9c7151e28fb5ce4/play-services-base-17.0.0/res/color/common_google_signin_btn_tint.xml"
+    }
+]
