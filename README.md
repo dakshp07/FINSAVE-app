@@ -64,7 +64,6 @@ Here is the walkthrough of the app which is still under development :
 
 <img src="assets/app_ss/app.gif" width="300"/>
 
-
 ## Screenshots
 
 <p>
