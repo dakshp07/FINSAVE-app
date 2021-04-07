@@ -1,4 +1,0 @@
-#Mon Mar 29 17:49:10 IST 2021
-base.0=/home/daksh/Desktop/AndroidStudioProjects/money_manager/build/app/intermediates/transforms/r8/release/0/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
