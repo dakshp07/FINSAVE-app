@@ -15,13 +15,26 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   final TextEditingController money = new TextEditingController();
-
+  String firstName, lastName;
   User user = FirebaseAuth.instance.currentUser;
   Future<void> signOut() async {
     await Firebase.initializeApp();
     FirebaseAuth.instance.signOut();
     Navigator.pushReplacement(context,
         MaterialPageRoute(builder: (BuildContext context) => OptionsPage()));
+  }
+
+  void _onPressed() {
+    FirebaseFirestore.instance
+        .collection("users")
+        .doc(user.uid)
+        .get()
+        .then((value) {
+      setState(() {
+        firstName = value.data()["first name"];
+        lastName = value.data()["last name"];
+      });
+    });
   }
 
   Future<void> _displayTextInputDialog(BuildContext context) async {
@@ -81,6 +94,12 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   @override
+  void initState() {
+    _onPressed();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         key: _scaffoldKey,
@@ -89,17 +108,22 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               new UserAccountsDrawerHeader(
                 decoration: new BoxDecoration(color: Colors.black),
-                accountName: new Text("Welcome to FINSAVE App :)",
+                accountName: new Text(firstName + " " + lastName,
                     style: GoogleFonts.poppins(
                         fontSize: 17, fontWeight: FontWeight.w600)),
-                accountEmail: new Text("finsavehelp@gmail.com",
+                accountEmail: new Text(user.email,
                     style: GoogleFonts.poppins(
                         fontSize: 15,
                         fontWeight: FontWeight.w600,
                         color: Colors.grey[600])),
                 currentAccountPicture: new CircleAvatar(
-                  backgroundImage: new AssetImage(
-                    "assets/logo/logo.JPG",
+                  backgroundColor: Colors.white,
+                  child: new Text(
+                    firstName[0].toUpperCase() + lastName[0].toUpperCase(),
+                    style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w600),
                   ),
                   radius: 10,
                 ),
@@ -360,7 +384,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 .snapshots(),
             builder: (BuildContext context,
                 AsyncSnapshot<DocumentSnapshot> snapshot) {
-              if (!snapshot.hasData)
+              if (!snapshot.hasData && _onPressed == null)
                 return new Center(child: new CircularProgressIndicator());
               return new SingleChildScrollView(
                 child: new Container(
@@ -373,11 +397,12 @@ class _HomeScreenState extends State<HomeScreen> {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 5)),
                           new IconButton(
-                            icon: new Icon(Icons.menu, color: Colors.black),
-                            iconSize: 45,
-                            onPressed: () =>
-                                _scaffoldKey.currentState.openDrawer(),
-                          ),
+                              icon: new Icon(Icons.menu, color: Colors.black),
+                              iconSize: 45,
+                              onPressed: () {
+                                _onPressed();
+                                _scaffoldKey.currentState.openDrawer();
+                              }),
                           new Padding(
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 5)),
