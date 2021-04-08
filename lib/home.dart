@@ -14,6 +14,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  final TextEditingController money = new TextEditingController();
 
   User user = FirebaseAuth.instance.currentUser;
   Future<void> signOut() async {
@@ -21,6 +22,62 @@ class _HomeScreenState extends State<HomeScreen> {
     FirebaseAuth.instance.signOut();
     Navigator.pushReplacement(context,
         MaterialPageRoute(builder: (BuildContext context) => OptionsPage()));
+  }
+
+  Future<void> _displayTextInputDialog(BuildContext context) async {
+    return showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            contentPadding: const EdgeInsets.all(20),
+            title: Text("Add Monthly Budget",
+                style: GoogleFonts.poppins(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black)),
+            content: TextField(
+              controller: money,
+              decoration: InputDecoration(
+                  hintText: "Enter the amount",
+                  hintStyle: GoogleFonts.poppins(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.grey[600])),
+            ),
+            actions: <Widget>[
+              FlatButton(
+                color: Colors.black,
+                child: Text('OK',
+                    style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white)),
+                onPressed: () {
+                  if (money.text.isNotEmpty) {
+                    FirebaseFirestore.instance
+                        .collection("users")
+                        .doc(user.uid)
+                        .update({"monthly budget": "₹" + money.text});
+                    Navigator.pop(context);
+                    money.clear();
+                  }
+                },
+              ),
+              FlatButton(
+                color: Colors.black,
+                child: Text('Cancel',
+                    style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white)),
+                onPressed: () {
+                  money.clear();
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          );
+        });
   }
 
   @override
@@ -342,83 +399,90 @@ class _HomeScreenState extends State<HomeScreen> {
                           )
                         ],
                       ),
-                      new Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          new Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: new Container(
-                              height: 160,
-                              decoration: new BoxDecoration(
-                                color: Colors.black,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
-                              ),
-                              child: new Padding(
-                                padding: const EdgeInsets.all(10),
-                                child: new Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    new Column(
+                      new GestureDetector(
+                          child: new Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              new Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                child: new Container(
+                                  height: 160,
+                                  decoration: new BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(20)),
+                                  ),
+                                  child: new Padding(
+                                    padding: const EdgeInsets.all(10),
+                                    child: new Row(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        new Padding(
-                                          padding:
-                                              const EdgeInsets.only(top: 5),
-                                        ),
-                                        new Text("Your Balance",
-                                            style: GoogleFonts.poppins(
-                                                fontSize: 20,
-                                                color: Colors.white)),
-                                        new Text(
-                                            snapshot.data
-                                                .data()["monthly budget"],
-                                            style: GoogleFonts.poppins(
-                                                fontSize: 30,
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.w600)),
                                         new Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
-                                            new Text("Tap here to",
+                                            new Padding(
+                                              padding:
+                                                  const EdgeInsets.only(top: 5),
+                                            ),
+                                            new Text("Your Balance",
                                                 style: GoogleFonts.poppins(
-                                                    fontSize: 15,
+                                                    fontSize: 20,
                                                     color: Colors.white)),
                                             new Text(
-                                                "change your monthly balance",
+                                                snapshot.data
+                                                    .data()["monthly budget"],
                                                 style: GoogleFonts.poppins(
-                                                    fontSize: 15,
-                                                    color: Colors.white)),
+                                                    fontSize: 30,
+                                                    color: Colors.white,
+                                                    fontWeight:
+                                                        FontWeight.w600)),
+                                            new Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                new Text("Tap here to",
+                                                    style: GoogleFonts.poppins(
+                                                        fontSize: 15,
+                                                        color: Colors.white)),
+                                                new Text(
+                                                    "change your monthly balance",
+                                                    style: GoogleFonts.poppins(
+                                                        fontSize: 15,
+                                                        color: Colors.white)),
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                        new Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 15),
+                                        ),
+                                        new Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            new Icon(
+                                              Icons.monetization_on,
+                                              size: 70,
+                                              color: Colors.white,
+                                            )
                                           ],
                                         )
                                       ],
                                     ),
-                                    new Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 15),
-                                    ),
-                                    new Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        new Icon(
-                                          Icons.monetization_on,
-                                          size: 70,
-                                          color: Colors.white,
-                                        )
-                                      ],
-                                    )
-                                  ],
+                                  ),
                                 ),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
+                              )
+                            ],
+                          ),
+                          onTap: () {
+                            _displayTextInputDialog(context);
+                          }),
                       new Padding(
                         padding: const EdgeInsets.only(top: 10),
                       ),
