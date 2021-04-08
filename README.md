@@ -74,6 +74,7 @@ alt="Splash View" width="300">
 <img src="assets/app_ss/signup.jpg" alt="Home View" width="300">
 <img src="assets/app_ss/name.jpg" alt="Home View" width="300">
 <img src="assets/app_ss/home.jpg" alt="Home View" width="300">
+<img src="assets/app_ss/dialogbox.jpg" alt="Home View" width="300">
 <img src="assets/app_ss/drawer.jpg" alt="Home View" width="300">
 <img src="assets/app_ss/developer.jpg" alt="Home View" width="300">
 </p>
