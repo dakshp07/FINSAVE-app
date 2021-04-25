@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:money_manager/appscreen.dart';
 import 'package:money_manager/developerscreen.dart';
 import 'package:money_manager/main.dart';
 
@@ -249,7 +250,12 @@ class _HomeScreenState extends State<HomeScreen> {
                               fontWeight: FontWeight.w600)),
                     ],
                   ),
-                  onTap: () {}),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => AppScreen()));
+                  }),
               new Padding(
                 padding: const EdgeInsets.only(top: 25),
               ),
@@ -384,7 +390,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 .snapshots(),
             builder: (BuildContext context,
                 AsyncSnapshot<DocumentSnapshot> snapshot) {
-              if (!snapshot.hasData && _onPressed == null)
+              if (!snapshot.hasData == null && _onPressed == null)
                 return new Center(child: new CircularProgressIndicator());
               return new SingleChildScrollView(
                 child: new Container(
