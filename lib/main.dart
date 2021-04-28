@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -48,9 +49,175 @@ class _MainPageState extends State<MainPage> {
     final firebaseUser = context.watch<User>();
 
     if (firebaseUser != null) {
-      return HomeScreen();
+      return SplashScreen();
     }
-    return OptionsPage();
+    return SplashscreenOp();
+  }
+}
+
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+        Duration(seconds: 4),
+        () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (BuildContext context) => HomeScreen())));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.white,
+        body: new Center(
+          child: new Column(
+            children: [
+              new Image.asset(
+                "assets/logo/logo.JPG",
+                height: 500,
+                width: 500,
+              ),
+              new Text("Hey :)",
+                  style: GoogleFonts.poppins(
+                      fontSize: 35, fontWeight: FontWeight.w700)),
+              new Padding(
+                padding: const EdgeInsets.only(top: 150),
+              ),
+              new Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  new Text(
+                    "Version 0.1.1",
+                    style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700),
+                  )
+                ],
+              ),
+              new Padding(
+                padding: const EdgeInsets.only(top: 20),
+              ),
+              new Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  new Text(
+                    "Made with ",
+                    style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700),
+                  ),
+                  new SvgPicture.asset(
+                    "assets/icons/love.svg",
+                    width: 22,
+                    height: 22,
+                    color: Colors.red[600],
+                  ),
+                  new Text(
+                    " by daksh",
+                    style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ));
+  }
+}
+
+class SplashscreenOp extends StatefulWidget {
+  @override
+  _SplashscreenOpState createState() => _SplashscreenOpState();
+}
+
+class _SplashscreenOpState extends State<SplashscreenOp> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+        Duration(seconds: 4),
+        () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (BuildContext context) => OptionsPage())));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.white,
+        body: new Center(
+          child: new Column(
+            children: [
+              new Image.asset(
+                "assets/logo/logo.JPG",
+                height: 500,
+                width: 500,
+              ),
+              new Text("Hey :)",
+                  style: GoogleFonts.poppins(
+                      fontSize: 35, fontWeight: FontWeight.w700)),
+              new Padding(
+                padding: const EdgeInsets.only(top: 150),
+              ),
+              new Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  new Text(
+                    "Version 0.1.1",
+                    style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700),
+                  )
+                ],
+              ),
+              new Padding(
+                padding: const EdgeInsets.only(top: 20),
+              ),
+              new Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  new Text(
+                    "Made with ",
+                    style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700),
+                  ),
+                  new SvgPicture.asset(
+                    "assets/icons/love.svg",
+                    width: 22,
+                    height: 22,
+                    color: Colors.red[600],
+                  ),
+                  new Text(
+                    " by daksh",
+                    style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ));
   }
 }
 
