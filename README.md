@@ -60,7 +60,7 @@ If You Want To Clone This Repository Then Do The Following Steps :
 $ git clone https://github.com/dakshp07/FINSAVE-app.git
 ```
 ## Walkthrough
-Here is the walkthrough of the app which is still under development :
+Here is the walkthrough of the app which is still **under development** :
 
 <img src="assets/app_ss/app.gif" width="300"/>
 
