@@ -67,6 +67,8 @@ Here is the walkthrough of the app which is still under development :
 ## Screenshots
 
 <p>
+<img src="assets/app_ss/splash.jpg"
+alt="Splash View" width="300">
 <img src="assets/app_ss/welcome.jpg"
 alt="Splash View" width="300">
 <img src="assets/app_ss/signin.jpg"
